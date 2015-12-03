@@ -25,9 +25,11 @@ use std::fmt::{self, Display};
 
 pub use options::Options;
 
-pub mod asymmetric;
+pub mod coroutine;
+//pub mod asymmetric;
 pub mod options;
 
+pub use coroutine::{Coroutine, Handle};
 /// Return type of resuming. Ok if resume successfully with the current state,
 /// Err if resume failed with `Error`.
 pub type Result<T> = ::std::result::Result<T, Error>;
